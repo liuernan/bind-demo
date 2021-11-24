@@ -1,3 +1,7 @@
-const bind = require('../src/index.js');
+const myBind = require('../src/index.js');
 
-console.log(bind);
+Function.prototype.myBind = myBind;
+
+const fn = ()=>{}
+
+console.log(fn.myBind);

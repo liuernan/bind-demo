@@ -1,3 +1,3 @@
-const _bind = function () {};
+const myBind = function () {};
 
-module.exports = _bind;
+module.exports = myBind;
