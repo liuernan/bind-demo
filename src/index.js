@@ -1,7 +1,7 @@
-function myBind(asThis) {
+function myBind(asThis, ...args) {
   const thisFn = this;
   return function () {
-    return thisFn.call(asThis);
+    return thisFn.call(asThis, ...args);
   }
 };
 

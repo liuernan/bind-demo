@@ -4,6 +4,7 @@ Function.prototype.myBind = myBind;
 
 test1('✅ 1.️ myBind 是一个函数');
 test2('✅ 2.️ myBind 接受的第一个参数作为 this 传给新的 fn');
+test3('✅ 3.️ myBind 接受的其余参数作为 args 传给新的 fn');
 
 function test1(msg) {
   const fn = () => {};
@@ -20,6 +21,21 @@ function test2(msg) {
   const fn2 = fn.myBind({name: '二男'});
 
   console.assert(fn2().name === '二男');
+
+  console.log(msg);
+}
+
+function test3(msg) {
+  const fn = function () {
+    return arguments;
+  };
+  const args = ['args1', 2, [3], {args: 4}]
+  const fn2 = fn.myBind(null, args[0], args[1], args[2], args[3]);
+
+  console.assert(fn2()[0] === args[0]);
+  console.assert(fn2()[1] === args[1]);
+  console.assert(fn2()[2] === args[2]);
+  console.assert(fn2()[3] === args[3]);
 
   console.log(msg);
 }
