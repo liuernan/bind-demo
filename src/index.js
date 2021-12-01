@@ -5,6 +5,6 @@ function myBind(asThis) {
     const otherArgs = Array.prototype.slice.call(arguments, 0);
     return thisFn.apply(asThis, args.concat(otherArgs));
   };
-}
+};
 
 module.exports = myBind;
