@@ -5,7 +5,7 @@ Function.prototype.myBind = myBind;
 test1('✅ 1.️ myBind 是一个函数');
 test2('✅ 2.️ myBind 接受的第一个参数作为 this 传给新的 fn');
 test3('✅ 3.️ myBind 接受的其余参数作为 args 传给新的 fn');
-test4('✅ 3.️ myBind 支持 fn.myBind(asThis, args1) 之后调用时再传更多的参数');
+test4('✅ 4.️ myBind 支持 fn.myBind(asThis, args1) 之后调用时再传更多的参数');
 
 function test1(msg) {
   const fn = () => {};
